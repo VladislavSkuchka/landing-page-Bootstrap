@@ -170,7 +170,7 @@ blockquote span{
 	background-color: #5c5c5c;
 }
 .navbar-toggle{
-	margin: 20px 0;
+	margin: 23px 0;
 }
 .navbar-toggle .icon-bar{
 	background-color: #fff;
@@ -181,7 +181,7 @@ blockquote span{
 	border-radius: 2px;
 	font-size: 12px;
 	text-transform: uppercase;
-	line-height: .2em;
+	letter-spacing: .2em;
 	color: #777;
 	box-shadow: none;
 
@@ -311,7 +311,7 @@ blockquote span{
 	position: absolute;
 	top: 90%;
 	left: 50%;
-	transform: translate(-50%, 80%)
+	transform: translate(-50%, 40%)
 }
 .inner-control:before{
 	content: "";
@@ -346,7 +346,6 @@ blockquote span{
 
 @media (max-height: 1199px) {
 	.inner{
-		height: auto;
 		padding-top: 200px;
 		padding-bottom: 200px;
 	}
@@ -382,12 +381,12 @@ blockquote span{
 	letter-spacing: .4em;
 	text-transform: uppercase;
 }
-.team-item{
+
+.team-item-img {
+	text-align: center;
 	position: relative;
 }
-.team-item-img{
-	text-align: center;
-}
+
 .team-item-info span{
 	display: block;
 }
@@ -400,6 +399,10 @@ blockquote span{
 	.team-item-info{
 		margin-bottom: 70px;
 	}
+	.team-item-img img{
+		width: 100%;
+	}
+
 }
 .team-item-info span.team-item-role{
 	font-size: 12px;
@@ -488,6 +491,15 @@ blockquote span{
 		font-size: 13px;
 	}
 }
+
+@media (max-width: 479px) {
+	.services-tabs .nav-tabs>li{
+		width: 66%;
+	}
+	.services-tabs .nav-tabs li .icon{
+		font-size: 35px;
+	}
+}
 /* Our Service End */
 
 /* Portfolio Start-------------------------------------------------------------------------------------------------------------------------*/
@@ -534,6 +546,8 @@ blockquote span{
 .our-portfolio p{
 	color: #777777;
 	font-size: 15px;
+	max-width: 770px;
+	margin: auto;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -551,9 +565,12 @@ blockquote span{
 }
 @media (max-width: 599px){
 	.our-portfolio .tablist-title{
-		font-size: 11px;
-		letter-spacing: .1em;
+		font-size: 15px;
+		letter-spacing: .2em;
+		margin: 40px;
+		line-height: 2.25;
 	}
+
 
 }
 @media (max-width: 479px){
@@ -561,17 +578,17 @@ blockquote span{
 		margin-bottom: 50px;
 	}
 	.our-portfolio p{
-		font-size: 12px;
+		font-size: 15px;
 	}
 	.our-portfolio .tablist-title{
-		font-size: 14px;
+		font-size: 15px;
 		letter-spacing: 0.5em;
 		line-height: 3;
 	}
 }
 @media (min-width: 319px) and (max-width: 372px){
 	.our-portfolio .tablist-title{
-		font-size: 11px;
+		font-size: 15px;
 	}
 }
 .portfolio-tabs{
@@ -586,7 +603,7 @@ blockquote span{
 
 .block-img{
 	float: left;
-	max-width: 33.3333%;
+	width: 33.3333%;
 	margin: 0;
 	padding: 0 6px 6px 0 ;
 	display: inline-block;
@@ -871,10 +888,7 @@ span.data{
 	color: #777777;
 	margin: 25px 0;
 }
-.latest-news .btn{
-	padding: 0;
-	margin: 0;
-}
+
 .latest-news  a.btn{
 	color: #7e7e7e;
 	background-color: #e5e5e5;
@@ -890,11 +904,15 @@ span.data{
 	.contact-item-content span{
 		margin-right: 50%;
 	}
+	.contact-item-content{
+		margin-top: 30px;
+	}
 }
 @media (max-width: 479px) {
 	.contact-item-content span{
 		margin-right: 25%;
 	}
+
 	.form-col.text-right{
 		float: left;
 	}
@@ -916,19 +934,22 @@ span.data{
 }
 
 .contact-item-icon{
-	width: 35px;
+	width: 23px;
+	height: 23px;
 	background-color: #000;
 	color: #fff;
 	float: left;
 	border-radius: 2px;
 	text-align: center;
-	line-height: 35px;
-	margin-right: 15px;
+	line-height: 23px;
+	margin: 15px;
 	transform: rotate(-45deg);
 }
 .contact-item-icon i{
-	transform: rotate(45deg);
+	transform: translateY(-15%) rotate(45deg);
+	font-size: 12px;
 }
+
 
 .contact-item-content span{
 	display: inline-block;
@@ -981,32 +1002,42 @@ span.data{
 	width: 100%;
 	height: 410px;
 }
-
-.on-map-block-icon{
+.on-map-block-items{
 	position: absolute;
-	top: 50%;
+	top: 45%;
+	left: 50%;
+}
+.on-map-block-icon{
+
+	margin-bottom: 25px;
 	background-color: #fff;
-	display: inline-block;
+	display: block;
 	border-radius: 2px;
-	width: 27px;
-	height: 27px;
-	line-height: 27px;
+	width: 22px;
+	height:22px;
+	line-height: 22px;
 	transform: translateY(-50%) rotate(-45deg);
 }
 .on-map-block-icon i{
 	transform: rotate(45deg);
-	font-size: 18px;
+	font-size: 16px;
 }
+
 .on-map-block-text{
 	color: #989898;
-	position: absolute;
-	top: 60%;
-	transform: translateX(-40%);
+	top: 70%;
+	display: inline-block;
+	transform: translateX(-42%);
 	font-size: 16px;
 	text-transform: uppercase;
 	letter-spacing: .3em;
 }
+@media (max-width: 479px){
+	.on-map-block-text{
+		letter-spacing: .1em;
 
+	}
+}
 /*Latest News End*/
 /*MAIN STYLE END*/
 
@@ -1014,27 +1045,27 @@ span.data{
 
 /*Footer Start*/
 .footer{
-	margin-top: 140px;
+	padding-top: 140px;
 
 }
 
 
 .footer-social-nav li{
 	display: inline-block;
-	/*height: 32px;*/
-	width: 32px;
+	height: 25px;
+	width: 25px;
 	margin-top: 24px;
 	margin-right: 26px;
 	border-radius: 2px;
 	border: 1px solid #2d2d2d;
-	line-height: 32px;
+	line-height: 25px;
 	text-align: center;
 	transform: translateX(30%) rotate(-45deg);
 }
 @media (max-width: 479px) {
 	.footer-social-nav li{
-		height: 30px;
-		width: 30px;
+		height: 25px;
+		width: 25px;
 	}
 }
 
@@ -1066,7 +1097,6 @@ span.data{
 }
 .footer-text span.footer-text-color{
 	color: #999999;
-	margin-top: 18px;
 	text-transform: none;
 	line-height: 2.18;
 	letter-spacing: 0;
